@@ -1,4 +1,5 @@
 #include "Tabla.h"
+#include "Columna.cpp"
 
 Tabla::Tabla() {
 
@@ -26,57 +27,6 @@ void Tabla::agregarDatos(string nombre,string apellido,int edad,float examenParc
 	
 }
 
-string getNombre(int posicion) {
-	/*
-	//crear metodo para el tamano
-		for(int i=0; i<nombres.dato.size(); i++) {
-			if(opcion == i) {
-				string nombre="";
-				nombre = nombres[i];
-				return nombre;
-			}
-		}
-		*/
-		
-}
-
-void setNombre(int posicion,string newName) {
-	
-	/*
-		for(int i=0; i<nombres.dato.size(); i++) {
-			if(posicion == i) {
-				nombres[i] = newName;
-			}
-		}
-	*/
-	
-}
-
-string getApellido() {
-
-}
-void setApellido(int posicion,string newApellido) {
-	/*
-		for(int i=0; i<apellidos.dato.size(); i++) {
-			if(posicion == i) {
-				nombres[i] = newApellido;
-			}
-		}
-	*/
-}
-
-int getEdad() {
-
-}
-void setEdad(int posicion,int newedad) {
-	/*
-		for(int i=0; i<edades.dato.size(); i++) {
-			if(posicion == i) {
-				nombres[i] = newedad;
-			}
-		}
-	*/
-}
 
 void Tabla::modificar() {
 /*

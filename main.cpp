@@ -1,7 +1,8 @@
 #include <iostream>
-#include <random>
-#include <ctime>
+#include <string>
+#include <time.h>
 #include "Tabla.h"
+#include <stdlib.h>
 using namespace std;
 
 int menu() {
@@ -23,12 +24,15 @@ int menu() {
 int main(int argc, char** argv) {
 	int opcion=0;
 	Tabla* tab = new Tabla();
+	
 	srand(time(NULL));
+	
 	while(opcion != 8 ) {
 		opcion = menu();
 		switch(opcion) {
 			case 1: {
-				string nombre ="",apellido="";
+				string nombre ="";
+				string apellido="";
 				int edad=0;
 				int notaExamenP=0,notaAcumulativo=0,notaExamenF=0;
 

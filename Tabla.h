@@ -18,14 +18,6 @@ class Tabla {
 		void modificar();
 		void eliminar();
 		
-		string getNombre(int);
-		void setNombre(int,string);
-		
-		string getApellido();
-		void setApellido(int,string);
-		
-		int getEdad();
-		void setEdad(int,int);
 				
 	private:
 		Columna<string>* nombres;
