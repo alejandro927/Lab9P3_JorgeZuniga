@@ -15,21 +15,20 @@ Tabla::~Tabla() {
 
 }
 
-void Tabla::agregarDatos(string Nombre,string Apellido,int Edad,float ExamenParcial,float Acumulativo,float ExamenFinal) {
+void Tabla::agregarDatos(string nombre,string apellido,int edad,float examenParcial,float acumulativo,float examenFinal) {
 
-	this->nombres.push_back(Nombre);
-	this->apellidos.push_back(Apellido);
-	this->edades.push_back(Edad);
-	this->notasExamenP.push_back(ExamenParcial);
-	this->notasAcumulativo.push_back(Acumulativo);
-	this->notasExamenF.push_back(ExamenFinal);
-
+	this->nombres->addVector(nombre);
+	this->apellidos->addVector(apellido);
+	this->edades->addVector(edad);
+	this->notasExamenP->addVector(examenParcial);
+	this->notasAcumulativo->addVector(acumulativo);
+	this->notasExamenF->addVector(examenFinal);
+	
 }
-
-
 
 string getNombre(int posicion) {
 	/*
+	//crear metodo para el tamano
 		for(int i=0; i<nombres.dato.size(); i++) {
 			if(opcion == i) {
 				string nombre="";
@@ -38,9 +37,11 @@ string getNombre(int posicion) {
 			}
 		}
 		*/
+		
 }
 
 void setNombre(int posicion,string newName) {
+	
 	/*
 		for(int i=0; i<nombres.dato.size(); i++) {
 			if(posicion == i) {
@@ -48,6 +49,7 @@ void setNombre(int posicion,string newName) {
 			}
 		}
 	*/
+	
 }
 
 string getApellido() {
@@ -77,7 +79,7 @@ void setEdad(int posicion,int newedad) {
 }
 
 void Tabla::modificar() {
-
+/*
 	int opcion=0;
 	cout<<"Menu"<<endl;
 	cout<<"1) Modificar el Nombre"<<endl;
@@ -117,7 +119,7 @@ void Tabla::modificar() {
 		}
 	}
 
-
+*/
 }
 
 void Tabla::eliminar() {

@@ -18,7 +18,6 @@ int menu() {
 	cout<<"Ingrese su opcion:";
 	cin>>opcion;
 	return opcion;
-
 }
 
 int main(int argc, char** argv) {

@@ -1,15 +1,30 @@
 #include "Columna.h"
+
+template <class T>
+Columna<T> Columna::Columna() {
+
+}
+
+template <class T>
+void addVector(T dato) {
+	this->datos.push_back(dato);
+}
+
 /*
 template <class T>
-Columna::Columna()
-{
+int tamano(T dato){
+	return this->datos.size();
+}
+
+
+template <class T>
+void modif(T dato){
 	
 }
 */
 
 template <class T>
 Columna<T> Columna<T>::sumar(Columna<T> dato) {
-
 	return dato;
 }
 

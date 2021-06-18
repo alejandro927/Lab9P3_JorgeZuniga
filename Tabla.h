@@ -28,13 +28,12 @@ class Tabla {
 		void setEdad(int,int);
 				
 	private:
-		Columna<string> nombres;
-		Columna<string> apellidos;
-		Columna<int> edades;
-		
-		Columna<float> notasExamenP;
-		Columna<float> notasAcumulativo;
-		Columna<float> notasExamenF;
+		Columna<string>* nombres;
+		Columna<string>* apellidos;
+		Columna<int>* edades;
+		Columna<float>* notasExamenP;
+		Columna<float>* notasAcumulativo;
+		Columna<float>* notasExamenF;
 		
 		
 };
