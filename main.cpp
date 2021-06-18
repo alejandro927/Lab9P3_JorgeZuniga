@@ -51,11 +51,10 @@ int main(int argc, char** argv) {
 			case 2: {
 				tab->modificar();
 
-
 				break;
 			}
 			case 3: {
-
+				tab->eliminar();
 				break;
 			}
 			case 4: {
@@ -83,6 +82,6 @@ int main(int argc, char** argv) {
 		}
 
 	}
-
+	delete tab;
 	return 0;
 }

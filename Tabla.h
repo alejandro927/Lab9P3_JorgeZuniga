@@ -16,9 +16,9 @@ class Tabla {
 		void agregarDatos(string,string,int,float,float,float);
 		void mostrarDatos();
 		void modificar();
+		void eliminar();
 		
-		
-		string getNombre();
+		string getNombre(int);
 		void setNombre(int,string);
 		
 		string getApellido();

@@ -4,19 +4,20 @@
 #include <vector>
 using namespace std;
 
-template <class T> 
-class Columna
-{
+template <class T>
+class Columna {
+
 	public:
-		vector<T> dato;
+		//Columna<T>();
 		
-		Columna<T> sumar( Columna<T> );
+		Columna<T>* sumar( Columna<T>* );
 		T min();
 		T max();
-		
-		
-		
+
 	private:
+		vector<T> dato;
+
+
 };
 
 #endif
