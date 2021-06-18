@@ -1,8 +1,9 @@
 #ifndef TABLA_H
 #define TABLA_H
 #include <iostream>
+#include <string>
 #include <vector>
-#include "Columna.h">
+#include "Columna.h"
 using namespace std;
 
 
@@ -10,8 +11,12 @@ using namespace std;
 class Tabla {
 	
 	public:
+		Tabla();
+		~Tabla();
 		void agregarDatos(string,string,int,float,float,float);
 		void mostrarDatos();
+		void modificar();
+		
 		
 		string getNombre();
 		void setNombre(int,string);
@@ -21,20 +26,17 @@ class Tabla {
 		
 		int getEdad();
 		void setEdad(int,int);
-		
-		
-		
-		
-		
+				
 	private:
-		Columna<string>nombres;
-		Columna<string>apellidos;
-		Columna<int>edades;
-		template <class T>
-		Columna<T>notasExamenP;
-		Columna<T>notasAcumulativo;
-		Columna<T>notasExamenF;
-
+		Columna<string> nombres;
+		Columna<string> apellidos;
+		Columna<int> edades;
+		
+		Columna<float> notasExamenP;
+		Columna<float> notasAcumulativo;
+		Columna<float> notasExamenF;
+		
+		
 };
 
 #endif

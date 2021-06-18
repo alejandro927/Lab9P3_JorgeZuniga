@@ -8,13 +8,15 @@ template <class T>
 class Columna
 {
 	public:
-		Columna<T> sumar(Columna<T>);
+		vector<T> dato;
+		
+		Columna<T> sumar( Columna<T> );
 		T min();
 		T max();
 		
-	protected:
 		
-		vector<T> datos;
+		
+	private:
 };
 
 #endif

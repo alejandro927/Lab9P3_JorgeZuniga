@@ -1,6 +1,8 @@
 #include <iostream>
+#include <random>
+#include <ctime>
+#include "Tabla.h"
 using namespace std;
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int menu() {
 	int opcion=0;
@@ -15,51 +17,72 @@ int menu() {
 	cout<<"8) Salida"<<endl;
 	cout<<"Ingrese su opcion:";
 	cin>>opcion;
-	return opcion; 
+	return opcion;
+
 }
 
 int main(int argc, char** argv) {
 	int opcion=0;
-	while(opcion != 8 ){
+	Tabla* tab = new Tabla();
+	srand(time(NULL));
+	while(opcion != 8 ) {
 		opcion = menu();
-		switch(opcion){
-			case 1:{
-				
+		switch(opcion) {
+			case 1: {
+				string nombre ="",apellido="";
+				int edad=0;
+				int notaExamenP=0,notaAcumulativo=0,notaExamenF=0;
+
+
+				cout<<"Ingrese el nombre:"<<endl;
+				getline(cin,nombre);
+				getline(cin,nombre);
+				cout<<"Ingrese el apellido:"<<endl;
+				getline(cin,apellido);
+				cout<<"Ingrese la edad:"<<endl;
+				cin>>edad;
+
+				notaExamenP = rand()%100;
+				notaAcumulativo = rand()%100;
+				notaExamenF = rand()%100;
+				tab->agregarDatos(nombre,apellido,edad,notaExamenP,notaAcumulativo,notaExamenF);
 				break;
 			}
-			case 2:{
-				
+			case 2: {
+				tab->modificar();
+
+
 				break;
 			}
-			case 3:{
-				
+			case 3: {
+
 				break;
 			}
-			case 4:{
-				
+			case 4: {
+
 				break;
 			}
-			case 5:{
-				
+			case 5: {
+
 				break;
 			}
-			case 6:{
-				
+			case 6: {
+
 				break;
 			}
-			case 7:{
-				
+			case 7: {
+
 				break;
 			}
-			case 8:{
+			case 8: {
 				cout<<"Gracias por usar el programa!!!\nBuen dia!!!";
 				break;
 			}
-			
-			
+
+
 		}
-		
+
 	}
-	
+
 	return 0;
 }
