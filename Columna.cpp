@@ -39,7 +39,7 @@ void Columna<T>::eliminar(int posicion){
 	for(int i=0;i<datos.size();i++){
 		if(posicion == i){
 			//pelis.erase(begin(pelis) + posicion);//este fue usado exactamente en el examen1 y no funciona aqui :v
-			datos.erase(begin(datos) + posicion);
+			//datos.erase(begin(datos) + posicion);
 		}
 	}
 }
