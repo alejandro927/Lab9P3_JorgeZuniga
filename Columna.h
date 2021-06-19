@@ -1,6 +1,6 @@
 #ifndef COLUMNA_H
 #define COLUMNA_H
-
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -11,7 +11,7 @@ class Columna {
 		Columna<T>();
 		void addVector(T);
 		
-		
+		void imprimirVector();
 		int tamano();
 		void modif(int,T);
 		void eliminar(int);
@@ -19,7 +19,7 @@ class Columna {
 		Columna<T>* sumar( Columna<T>* );
 		T min();
 		T max();
-
+		
 	private:
 		vector<T> datos;
 

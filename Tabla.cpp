@@ -29,7 +29,7 @@ void Tabla::agregarDatos(string nombre,string apellido,int edad,float examenParc
 
 
 void Tabla::modificar() {
-/*
+
 	int opcion=0;
 	cout<<"Menu"<<endl;
 	cout<<"1) Modificar el Nombre"<<endl;
@@ -38,60 +38,67 @@ void Tabla::modificar() {
 	cout<<"Ingrese su opcion:";
 	cin>>opcion;
 	//Tabla tab ;
-	for(int i=0; i<nombres.dato.size() ; i++) {
-		//cout<<"Nombre:"<<tab.getNombre();
-	}
-	int posicion=0;
-	cout<<"Ingrese la posicion que desea modificar:";
+	this->nombres->imprimirVector();
+	cout<<endl;
+	cout<<endl<<"Ingrese la posicion que desea modificar:";
+	int posicion;
 	cin>>posicion;
+	while((posicion < 0) || (posicion > this->nombres->tamano())){
+		cout<<"Posicion no valida ingrese otro:";
+		cin>>posicion;
+	}
 
 	switch(opcion) {
 		case 1: {
 			cout<<"Ingrese el nuevo nombre:";
 			string nombre="";
 			getline(cin,nombre);
-			nombres[i].setNombre(posicion,nombre);
+			getline(cin,nombre);
+			this->nombres->modif(posicion,nombre);
 			break;
 		}
 		case 2: {
 			cout<<"Ingrese el nuevo apellido:";
 			string apellido="";
 			getline(cin,apellido);
-			nombres[i].setApellido(posicion,apellido);
+			getline(cin,apellido);
+			this->nombres->modif(posicion,apellido);
 			break;
 		}
 		case 3: {
 			cout<<"Ingrese la nueva edad:";
 			int edad;
 			cin>>edad;
-			nombres[i].setEdad(posicion,Edad);
+			string a = edad + "";
+			this->nombres->modif(posicion,a);
 			break;
 		}
+		default:
+			cout<<"opcion no valida :v"<<endl;
 	}
 
-*/
+
 }
 
 void Tabla::eliminar() {
-
-	/*
-	int opcion=0;
-	cout<<"Ingrese la posicion que desea eliminar:";
-	cin>>opcion;
-	while(opcion < 0 || opcion > nombres.size()){
-		cout<<"Numero no valido ingrese nuevamente:";
-		cin>>opcion;
+	int posicion;
+	this->nombres->imprimirVector();
+	cout<<endl<<"Ingrese la posicion que desea eliminar:";
+	cin>>posicion;
+	while((posicion < 0) || (posicion > this->nombres->tamano())){
+		cout<<"Posicion no valida ingrese otra:";
+		cin>>posicion;
 	}
-
-	for(int i=0;i<nombres.size();i++){
-		if(opcion == i){
-			//aqui cod para eliminar
-		}
-	}
-	cout<<"Eliminado exitoso!!";
-	*/
-
+	
+	this->nombres->eliminar(posicion);
+	
+	
 }
+
+void Tabla::imprimirTabla(){
+	this->nombres->imprimirVector();
+}
+
 
 void Tabla::mostrarDatos() {
 

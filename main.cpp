@@ -5,6 +5,7 @@
 #include <stdlib.h>
 using namespace std;
 
+
 int menu() {
 	int opcion=0;
 	cout<<"Menu"<<endl;
@@ -22,6 +23,7 @@ int menu() {
 }
 
 int main(int argc, char** argv) {
+	//system("color 57");
 	int opcion=0;
 	Tabla* tab = new Tabla();
 	
@@ -49,37 +51,37 @@ int main(int argc, char** argv) {
 				notaAcumulativo = rand()%100;
 				notaExamenF = rand()%100;
 				tab->agregarDatos(nombre,apellido,edad,notaExamenP,notaAcumulativo,notaExamenF);
-				break;
 			}
+				break;
 			case 2: {
 				tab->modificar();
 
-				break;
 			}
+				break;
 			case 3: {
 				tab->eliminar();
-				break;
 			}
+				break;
 			case 4: {
-
-				break;
+				tab->imprimirTabla();
 			}
+				break;
 			case 5: {
 
-				break;
 			}
+				break;
 			case 6: {
 
-				break;
 			}
+				break;
 			case 7: {
 
-				break;
 			}
+				break;
 			case 8: {
 				cout<<"Gracias por usar el programa!!!\nBuen dia!!!";
-				break;
 			}
+				break;
 
 
 		}

@@ -6,8 +6,6 @@
 #include "Columna.h"
 using namespace std;
 
-
-
 class Tabla {
 	
 	public:
@@ -17,7 +15,7 @@ class Tabla {
 		void mostrarDatos();
 		void modificar();
 		void eliminar();
-		
+		void imprimirTabla();
 				
 	private:
 		Columna<string>* nombres;
