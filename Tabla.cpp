@@ -29,12 +29,15 @@ void Tabla::agregarDatos(string nombre,string apellido,int edad,float examenParc
 
 
 void Tabla::modificar() {
-
+srand(time(NULL));
 	int opcion=0;
 	cout<<"Menu"<<endl;
 	cout<<"1) Modificar el Nombre"<<endl;
 	cout<<"2) Modificar el Apellido"<<endl;
 	cout<<"3) Modificar la Edad"<<endl;
+	cout<<"4) Modificar la nota del examen parcial:"<<endl;
+	cout<<"5) Modificar la nota del acumulativo:"<<endl;
+	cout<<"6) Modificar la nota del examen final:"<<endl;
 	cout<<"Ingrese su opcion:";
 	cin>>opcion;
 	//Tabla tab ;
@@ -62,17 +65,36 @@ void Tabla::modificar() {
 			string apellido="";
 			getline(cin,apellido);
 			getline(cin,apellido);
-			this->nombres->modif(posicion,apellido);
+			this->apellidos->modif(posicion,apellido);
 			break;
 		}
 		case 3: {
 			cout<<"Ingrese la nueva edad:";
 			int edad;
 			cin>>edad;
-			string a = edad + "";
-			this->nombres->modif(posicion,a);
+			this->edades->modif(posicion,edad);
 			break;
 		}
+		case 4:{
+			int notaExamenP=0;
+			notaExamenP = rand()%100;
+			this->notasExamenP->modif(posicion,notaExamenP);
+		}
+		break;
+		case 5:{
+			int notaAcumulativo=0;
+			notaAcumulativo = rand()%100;\
+			this->notasAcumulativo->modif(posicion,notaAcumulativo);
+		}
+		break;
+		case 6:{
+			int notaExamenF=0;
+			notaExamenF = rand()%100;\
+			this->notasExamenF->modif(posicion,notaExamenF);
+			
+		}
+		break;
+		
 		default:
 			cout<<"opcion no valida :v"<<endl;
 	}
@@ -91,7 +113,11 @@ void Tabla::eliminar() {
 	}
 	
 	this->nombres->eliminar(posicion);
-	
+	this->apellidos->eliminar(posicion);
+	this->edades->eliminar(posicion);
+	this->notasExamenP->eliminar(posicion);
+	this->notasAcumulativo->eliminar(posicion);
+	this->notasExamenF->eliminar(posicion);
 	
 }
 

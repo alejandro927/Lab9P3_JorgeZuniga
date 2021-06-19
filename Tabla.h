@@ -1,6 +1,8 @@
 #ifndef TABLA_H
 #define TABLA_H
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 #include <string>
 #include <vector>
 #include "Columna.h"

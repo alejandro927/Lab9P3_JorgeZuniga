@@ -30,7 +30,7 @@ void Columna<T>::modif(int posicion, T cambio){
 template <class T>
 void Columna<T>::imprimirVector(){
 	for(int i=0;i<datos.size();i++){
-		cout<<i<<") "<<"Nombre: "<<datos[i]<<endl;
+		cout<<i<<") " << datos[i]<<endl;
 	}
 }
 
@@ -38,7 +38,8 @@ template <class T>
 void Columna<T>::eliminar(int posicion){
 	for(int i=0;i<datos.size();i++){
 		if(posicion == i){
-			//datos.erase(begin(datos) + posicion);
+			//pelis.erase(begin(pelis) + posicion);//este fue usado exactamente en el examen1 y no funciona aqui :v
+			datos.erase(begin(datos) + posicion);
 		}
 	}
 }
