@@ -36,9 +36,7 @@ int main(int argc, char** argv) {
 				string nombre ="";
 				string apellido="";
 				int edad=0;
-				int notaExamenP=0,notaAcumulativo=0,notaExamenF=0;
-
-
+				float notaExamenP=0,notaAcumulativo=0,notaExamenF=0;
 				cout<<"Ingrese el nombre:"<<endl;
 				getline(cin,nombre);
 				getline(cin,nombre);
@@ -67,23 +65,21 @@ int main(int argc, char** argv) {
 			}
 				break;
 			case 5: {
-
+				tab->max();
 			}
 				break;
 			case 6: {
-
+				tab->min();
 			}
 				break;
 			case 7: {
-
+				tab->mostrarDatos();
 			}
 				break;
 			case 8: {
 				cout<<"Gracias por usar el programa!!!\nBuen dia!!!";
 			}
 				break;
-
-
 		}
 
 	}
